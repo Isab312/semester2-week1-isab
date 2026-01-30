@@ -7,3 +7,7 @@
 -- 2. Load this script: .read tasks.sql
 -- 3. Exit SQLite: .exit
 
+Select Continent, AVG(LiteracyPercent)
+FROM
+countries GROUP BY Continent
+ORDER BY AVG(LiteracyPercent) asc  LIMIT 5;
