@@ -3,7 +3,7 @@
 -- Expected Columns:
 -- StudentId, FirstName, LastName, CourseName
 
-Select StudentId, FirstName, LastName, CourseName
+Select Student.StudentId, Student.FirstName, Student.LastName, Course.CourseName
 from Student
-JOIN Student on Student.StudentId=Enrolment.EnrolmentId
-JOIN Enrolment on Enrolment.CourseId=Course.CourseId
+JOIN Enrolment on Student.StudentId=Enrolment.StudentId
+JOIN Course on Enrolment.CourseId=Course.CourseId
